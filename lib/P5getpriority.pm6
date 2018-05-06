@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5getpriority:ver<0.0.1>:auth<cpan:ELIZABETH>;
+unit module P5getpriority:ver<0.0.2>:auth<cpan:ELIZABETH>;
 
 use NativeCall;
 
@@ -22,6 +22,13 @@ my sub setpriority(Int() $which, Int() $who, Int() $prio) is export {
 my sub getppid(--> uint32) is native is export {*}
 
 my sub getpgrp(--> uint32) is native is export {*}
+
+my sub setpgrp(Int() $pid, Int() $pgid) is export {
+    sub _setpgrp(int32, int32 --> int32) is native is symbol<setpgrp> {*}
+    my int32 $npid  = $pid;
+    my int32 $npgid = $pgid;
+    _setpgrp($npid, $npgid)
+}
 
 =begin pod
 
@@ -46,7 +53,7 @@ P5getpriority - Implement Perl 5's getpriority() and associated built-ins
 This module tries to mimic the behaviour of the C<getpriority> and associated
 functions of Perl 5 as closely as possible.  It exports by default:
 
-    getpgrp getppid getpriority setpriority
+    getpgrp getppid getpriority setpgrp setpriority
 
 =head1 AUTHOR
 

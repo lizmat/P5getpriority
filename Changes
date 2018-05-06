@@ -1,6 +1,7 @@
 Revision history for P5getpriority
 
 {{$NEXT}}
+    - Add setpgrp, which makes sense here
 
 0.0.1  2018-05-06T20:24:34+02:00
     - Initial version

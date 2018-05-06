@@ -23,7 +23,7 @@ DESCRIPTION
 
 This module tries to mimic the behaviour of the `getpriority` and associated functions of Perl 5 as closely as possible. It exports by default:
 
-    getpgrp getppid getpriority setpriority
+    getpgrp getppid getpriority setpgrp setpriority
 
 AUTHOR
 ======
