@@ -3,7 +3,7 @@ use Test;
 use P5getpriority;
 
 my @supported = <
-  getpriority setpriority
+  getpgrp getppid getpriority setpriority
 >.map: '&' ~ *;
 
 plan @supported * 2;
