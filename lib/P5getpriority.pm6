@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5getpriority:ver<0.0.2>:auth<cpan:ELIZABETH>;
+unit module P5getpriority:ver<0.0.3>:auth<cpan:ELIZABETH>;
 
 use NativeCall;
 
@@ -19,7 +19,7 @@ my sub setpriority(Int() $which, Int() $who, Int() $prio) is export {
     _setpriority($nwhich, $nwho, $nprio)
 }
 
-my sub getppid(--> uint32) is native is export {*}
+my sub getppid() is export { use nqp; nqp::getppid }
 
 my sub getpgrp(--> uint32) is native is export {*}
 
