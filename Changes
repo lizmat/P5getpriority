@@ -2,6 +2,9 @@ Revision history for P5getpriority
 
 {{$NEXT}}
 
+0.0.6  2019-11-10T13:59:10+01:00
+    - changed Perl 5 to Perl
+
 0.0.5  2018-10-02T18:54:02+02:00
     - Replace nqp::getppid by native call to support older Rakudo's
 

@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module P5getpriority:ver<0.0.5>:auth<cpan:ELIZABETH>;
+unit module P5getpriority:ver<0.0.6>:auth<cpan:ELIZABETH>;
 
 use NativeCall;
 
@@ -35,7 +35,7 @@ my sub setpgrp(Int() $pid, Int() $pgid) is export {
 
 =head1 NAME
 
-P5getpriority - Implement Perl 5's getpriority() and associated built-ins
+P5getpriority - Implement Perl's getpriority() and associated built-ins
 
 =head1 SYNOPSIS
 
@@ -52,7 +52,7 @@ P5getpriority - Implement Perl 5's getpriority() and associated built-ins
 =head1 DESCRIPTION
 
 This module tries to mimic the behaviour of the C<getpriority> and associated
-functions of Perl 5 as closely as possible.  It exports by default:
+functions of Perl as closely as possible.  It exports by default:
 
     getpgrp getppid getpriority setpgrp setpriority
 
@@ -102,9 +102,9 @@ and Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018-2019 Elizabeth Mattijsen
 
-Re-imagined from Perl 5 as part of the CPAN Butterfly Plan.
+Re-imagined from Perl as part of the CPAN Butterfly Plan.
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
