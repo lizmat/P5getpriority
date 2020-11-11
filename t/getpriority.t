@@ -1,4 +1,4 @@
-use v6.c;
+use v6.*;
 use Test;
 use P5getpriority;
 
@@ -22,4 +22,4 @@ ok -20 <= getpriority(2, $*USER) <= 20,
 lives-ok { setpgrp(0, 0) },              'can we setpgrp without dying';
 lives-ok { setpriority(0, $*PID, -20) }, 'can we setpriority without dying';
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

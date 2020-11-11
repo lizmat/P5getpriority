@@ -2,6 +2,12 @@ Revision history for P5getpriority
 
 {{$NEXT}}
 
+0.0.7  2020-11-11T20:22:01+01:00
+    - Change name of distribution
+    - Force to highest possible Raku version
+    - Update copyright year
+    - Add PORTING CAVEATS section about needing POSIX semantics
+
 0.0.6  2019-11-10T13:59:10+01:00
     - changed Perl 5 to Perl
 
